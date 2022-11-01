@@ -1,0 +1,12 @@
+หัวข้อ สตริง
+
+chapter 1   จงเขียนโปรแกรมเพื่อหาตำแหน่งของอักษร ‘i’
+            ลำดับเลขคู่(2, 4, 6, 8, 10, ...) จากข้อความ
+             “It has survived not only five centuries,
+              but also the leap into electronic typesetting, 
+              remaining essentially unchanged.”
+
+chapter 2   จงเขียนโปรแกรมเพื่อหาคำที่มีอักษร ‘e’
+            สองตัวอยู่ในคำจากข้อความ “It has survived not only  
+            five  centuries,  but  also  the  leap  into  
+            electronic  typesetting,  remaining essentially unchanged.”
