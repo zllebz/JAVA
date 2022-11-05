@@ -1,0 +1,31 @@
+หัวข้อ Collection ( ArrayList , HashMap )
+
+chapter 1   จงหาผลลัพธ์จากโปรแกรมต่อไปนี้
+            package collections.example;import 
+            
+            java.util.HashMap;
+            public class WorkSheet01 {
+                public static void main(String args[]) {
+                    HashMap<Integer,String> 
+                    map=new HashMap();          
+                    map.put(100,"Amit");    
+                    map.put(101,"Vijay");    
+                    map.put(102,"Rahul");  
+                    map.put(103, "Gaurav");  
+                        System.out.println("Initial list of elements: "+map);  
+                    map.remove(100);  
+                        System.out.println("Updated list of elements: "+map); 
+                    map.remove(101);  
+                        System.out.println("Updated list of elements: "+map);   
+                    map.remove(102, "Rahul");  
+                        System.out.println("Updated list of elements: "+map);  
+                }    
+            }
+
+
+chapter 2   จงเขียนโปรแกรมเพื่อเรียงลำดับความถี่ของตัวเลขในอาร์เรย์ที่กำหนด โดนเรียงลำดับจากความถี่มากไปหาน้อย
+            int[][] arr = {
+                {5, 7, 5, 2, 3, 3, 3, 0, 6, 9},
+                {8, 2, 6, 7, 4, 8, 4, 8, 2, 4},
+                {2, 9, 5, 6, 1, 3, 8, 7, 9, 8}
+            };
