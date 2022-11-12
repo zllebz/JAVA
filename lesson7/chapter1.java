@@ -16,9 +16,9 @@ class Monster {
     }
 }
 class Vampire extends Monster {
-    int frighten(int f) {
+    boolean frighten(int f) {
         System.out.println("a bite?");
-        return 1;
+        return true;
     }
 }
 class Dragon extends Monster {

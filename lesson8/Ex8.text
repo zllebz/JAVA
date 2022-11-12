@@ -1,0 +1,87 @@
+หัวข้อ คลาสนามธรรมและอินเตอร์เฟซ
+
+chapter 1   จากโปรแกรมที่กำหนดให้ จงแก้ไขให้ถูกต้องและแสดงผลลัพธ์
+            class Character {
+                String name;Character(String n) {
+                    name = n;
+                }
+                public void fly(){
+                    System.out.println("Call method fly() in Character");
+                    System.out.println(name+" fly.");
+                }
+            }
+            interface Fighting {
+                void fight();
+            }
+            interface Flying {
+                void fly();
+            }
+            class Hero extends Character implements Fighting, Flying {
+                public void fight() {
+                    System.out.println("Call method fight () in Hero");
+                    System.out.println(name+" fight.");
+                }
+                //public void fly() {
+                    //System.out.println("Call method fly() in Hero");
+                    //System.out.println(name+" fly.");
+                //}
+            }
+            class MultiInherit {
+                static void doFighting(Fighting f) {
+                    f.fight();
+                }
+                static void doFlying(Flying f) {
+                    f.fly();
+                }
+                static void doAct(Character a) {
+                    a.fly();
+                }
+                public static void main(String[] args) {
+                    Hero hero = new Hero("Superman");
+                    doFighting(hero);
+                    doFlying(hero);
+                    doAct(hero);
+                }
+            }
+
+chapter 2   จากข้อ 1  ถ้าลบ comment ในบรรทัดที่ 23 –26 จะได้ผลลัพธ์เป็นอย่างไร
+            Call method fight () in Hero
+            Superman fight.
+            Call method fly() in Character
+            Superman fly.
+            Call method fly() in Character
+            Superman fly.   
+
+chapter 3   จากโปรแกรมที่กำหนดให้ จงแก้ไขให้ถูกต้องและแสดงผลลัพธ์
+            interface Interface1{
+                void myMethod();
+            }
+            interface Interface2{
+                int myMethod(int x);
+            }
+            interface Interface3{
+                int myMethod();
+            }
+            interface Interface4 extends Interface1, Interface3{ }
+            class Class1 {
+                public int myMethod() { }
+            }
+            class Class2 implements Interface1,Interface2{
+                void myMethod() { }public int myMethod(int x) {
+                    return 8;
+                }
+            }
+            class Class3 extends Class1 implements Interface2{
+                public int myMethod(int x) {
+                    return 9;
+                }
+            }
+            class Class4 extends Class1 implements Interface3{ }
+            class Class5 extends Class1 implements Interface1{ }
+
+chapter 4   จากข้อ 3 จงอธิบายว่าเหตุใดจึง compile ไม่ผ่าน
+            ลบ interface 3 เพราะ interface 1 กับ interface 3 ผิดกฎ Overload
+            return 7; // ต้อง return ค่าออก เพราะประกาศเป็น int
+            
+            'public' void myMethod() { //เพิ่ม public 
+
